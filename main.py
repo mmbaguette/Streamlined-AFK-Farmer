@@ -80,9 +80,17 @@ def full_speed(t):
     throttle down and use breaks
     wait 26s to slow down 
     """
-    pyautogui.hotkey('w','a', interval=3)
+    pyautogui.keyDown('w')
+    pyautogui.keyDown('a')
+    time.sleep(3)
+    pyautogui.keyUp('w')
+    pyautogui.keyUp('a')
     time.sleep(t)
-    pyautogui.hotkey('s','d', interval=3)
+    pyautogui.keyDown('s')
+    pyautogui.keyDown('d')
+    time.sleep(3)
+    pyautogui.keyUp('s')
+    pyautogui.keyUp('d')
     time.sleep(26)
 
 def T():
