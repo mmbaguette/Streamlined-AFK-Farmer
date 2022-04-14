@@ -1,66 +1,4 @@
 """
-- After manually spawning:
-
-- full speed for 46s
-
-- press T to reverse
-
-- wait for 4s
-
-- press T to load passengers
-
-- wait for 33s
-
-- full speed for 4:25m
-
-- press T to load
-
-- wait for 33s
-
-- full speed for 2:43m
-
-- press T to load
-
-- wait for 33s
-
-- full speed for 3:30m
-
-- press T to unload
-
-- wait for 33s
-
-- You completed your trip! Reverse:
-
-- click at Point(x=854, y=579) to reverse
-
-- wait for 4s
-
-- press T to load
-
-- wait 33s
-
-- full speed for 3:30m
-
-- press T to load
-
-- wait 33s
-
-- full speed for 2:43m
-
-- press T to load
-
-- wait 33s
-
-- full speed for 4:25
-
-- press T to unload
-
-- wait for 33s
-
-- click at Point(x=854, y=579) to reverse
-
-- jump to line 8 (wait for 4s)
-
 - takes 45 seconds to go full speed (65 km/h or something)
 - if you stop from 300m to destination, it takes 24s to stop
 - takes 1:43 to travel 1.2km (~0.84km/h)
@@ -68,10 +6,8 @@
 - wait 4s after pressing redo route button
 """
 
-import pyautogui
+import pydirectinput
 import time
-
-but_x, but_y = 854, 579 # x, y screen coordinates of the reverse button
 
 def full_speed(t):
     """ 
@@ -80,57 +16,70 @@ def full_speed(t):
     throttle down and use breaks
     wait 26s to slow down 
     """
-    pyautogui.keyDown('w')
-    pyautogui.keyDown('a')
+    pydirectinput.keyDown('w')
+    pydirectinput.keyDown('a')
     time.sleep(3)
-    pyautogui.keyUp('w')
-    pyautogui.keyUp('a')
+    pydirectinput.keyUp('w')
+    pydirectinput.keyUp('a')
     time.sleep(t)
-    pyautogui.keyDown('s')
-    pyautogui.keyDown('d')
+    pydirectinput.keyDown('s')
+    pydirectinput.keyDown('d')
     time.sleep(3)
-    pyautogui.keyUp('s')
-    pyautogui.keyUp('d')
+    pydirectinput.keyUp('s')
+    pydirectinput.keyUp('d')
     time.sleep(26)
 
 def T():
     # press T to load, reverse, or unload
-    pyautogui.press('t')
+    pydirectinput.press('t')
 
 def wait(t):
     time.sleep(t)
 
+print("Welcome to MmBaguette's train farmer!")
 wait(5) # wait 5 seconds before starting
-full_speed(46)
+print("On my way to the first station!")
+full_speed(43)
 T()
+print("I just reversed the train!")
 
 while True:
     # Zand - Hazel
-    wait(4)
+    print("Let's go from Zand op 't Zee to Hazeldrecht!")
+    wait(5)
     T()
     wait(33)
-    full_speed(265)
+    full_speed(263)
+    print("Welcome to the second station!")
     T()
     wait(33)
-    full_speed(163)
+    full_speed(161)
+    print("Welcome to the third station!")
     T()
     wait(33)
-    full_speed(210)
+    full_speed(207)
+    print("We've arrived at Hazeldrecht!")
     T()
-    wait(33)
-    
+    print("Unloading passengers...")
+    wait(45)
+
     # Hazel - Zand
-    pyautogui.click(x=but_x, y=but_y)
-    wait(4)
+    print("Let's go from Hazeldrecht to Zand op 't Zee!")
+    input("Click the reverse button, then come back here and press [Enter] to continue.")
+    wait(5)
+    print("Loading our first passengers...")
     T()
     wait(33)
-    full_speed(210)
+    full_speed(207)
+    print("Welcome to the second station!")
     T()
     wait(33)
-    full_speed(163)
+    full_speed(161)
+    print("Third station!")
     T()
     wait(33)
-    full_speed(265)
+    full_speed(263)
+    print("We're back at Zand op 't Zee!")
     T()
     wait(33)
-    pyautogui.click(x=but_x, y=but_y)
+    print("Click the reverse button, then come back here and press [Enter] to continue.")
