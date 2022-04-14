@@ -92,6 +92,7 @@ def T():
 def wait(t):
     time.sleep(t)
 
+wait(5) # wait 5 seconds before starting
 full_speed(46)
 T()
 
