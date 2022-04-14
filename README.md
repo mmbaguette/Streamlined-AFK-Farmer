@@ -1,6 +1,6 @@
 ﻿# Streamlined Farmer
 
-A Python script that controls your keypresses in the Roblox train simulator [Streamlined](https://www.roblox.com/games/1788251222/) so that you can farm for Gulden and levels. This was specifically made and timed for the NS 4500 train from  with seven third class C8c wagons, so it's completely beginner friendly!
+A Python script that controls your keypresses in the Roblox train simulator [Streamlined](https://www.roblox.com/games/1788251222/) so that you can farm for Gulden and levels. This was specifically made and timed for the **NS 4500** train from **Zand op 't Zee** to **Hazeldrecht** with seven third class C8c wagons, so it's completely beginner friendly!
 
 ![image](https://user-images.githubusercontent.com/76597978/163438984-e2c9e77d-8f47-45a4-956a-7f999e18dbd7.png)
 
