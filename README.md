@@ -19,4 +19,4 @@ Download the [main.py](main.py) script. Spawn your train and the carts using the
 
 Happy farming!
 
-**NOTE:** This project was not made to harm any of the developers, and was simply created for fun. 
+**NOTE:** This project was not made to harm or disrespect any of the developers, and was simply created for fun. 
